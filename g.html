@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <title>p5.js Cursor Lines</title>
+</head>
+<body>
+  <script>
+    // function setup() {
+    //   createCanvas(400, 400);
+    //   stroke(255); // Set line color to white
+    //   noFill();    // Disable filling shapes
+    // }
+
+    // function draw() {
+    //   background(0); // Set background color to black
+    //   let numLines = 10; // Number of lines to draw
+
+    //   for (let i = 0; i < numLines; i++) {
+    //     // Calculate the angle based on mouse position
+    //     let angle = map(i, 0, numLines, 0, TWO_PI);
+
+    //     // Calculate the line's length based on mouseX
+    //     let lineLength = map(mouseX, 0, width, 10, 100);
+
+    //     // Calculate the endpoint of the line
+    //     let x2 = mouseX + cos(angle) * lineLength;
+    //     let y2 = mouseY + sin(angle) * lineLength;
+
+    //     // Draw the line
+    //     line(mouseX, mouseY, x2, y2);
+    //   }
+    // }
+
+//     function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+//   let lineSpacing = 20; // Spacing between lines
+
+//   for (let x = 0; x < width; x += lineSpacing) {
+//     for (let y = 0; y < height; y += lineSpacing) {
+//       // Calculate the angle based on mouse position
+//       let angle = atan2(mouseY - y, mouseX - x);
+      
+//       // Calculate the line's length based on distance from the cursor
+//       let distance = dist(mouseX, mouseY, x, y);
+//       let lineLength = map(distance, 0, width, 10, 100);
+      
+//       // Calculate the endpoint of the line
+//       let x2 = x + cos(angle) * lineLength;
+//       let y2 = y + sin(angle) * lineLength;
+      
+//       // Draw the line
+//       line(x, y, x2, y2);
+//     }
+//   }
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 20; // Spacing between lines
+// let rows, cols;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the angle based on mouse position
+//       let angle = atan2(mouseY - y1, mouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 20; // Spacing between lines
+// let margin = 30; // Margin on the right side
+// let rows, cols;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor((width - margin) / spacing); // Adjust the number of columns to account for margin
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the angle based on mouse position
+//       let angle = atan2(mouseY - y1, mouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 20; // Spacing between lines
+// let rows, cols;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the angle based on mouse position
+//       let angle = atan2(mouseY - y1, mouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the angle based on mouse position
+//       let angle = atan2(mouseY - y1, mouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the smoothed cursor position
+//       let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//       let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+
+// function setup() {
+//   createCanvas(400, 400);
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the smoothed cursor position
+//       let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//       let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//       // Calculate the distance between the cursor and the line
+//       let distance = dist(smoothMouseX, smoothMouseY, x1, y1);
+
+//       // Calculate opacity based on the distance
+//       let opacity = map(distance, 0, width, 255, 0);
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight); // Set canvas size to innerWidth and innerHeight
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the smoothed cursor position
+//       let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//       let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//       // Calculate the distance between the cursor and the line
+//       let distance = dist(smoothMouseX, smoothMouseY, x1, y1);
+
+//       // Calculate opacity based on the distance
+//       let opacity = map(distance, 0, width, 255, 0);
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// // Resize the canvas when the window is resized
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+// let gradientRadius = 300; // Radius of the gradient circle
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight); // Set canvas size to innerWidth and innerHeight
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the smoothed cursor position
+//       let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//       let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//       // Calculate the distance between the cursor and the line
+//       let distance = dist(smoothMouseX, smoothMouseY, x1, y1);
+
+//       // Calculate opacity based on the distance within the gradientRadius
+//       let opacity = map(distance, 0, gradientRadius, 255, 0);
+//       opacity = constrain(opacity, 0, 255); // Ensure opacity is within 0-255
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// // Resize the canvas when the window is resized
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+// let gradientRadius = 100;
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight); // Set canvas size to innerWidth and innerHeight
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the smoothed cursor position
+//       let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//       let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//       // Calculate the distance between the cursor and the line
+//       let distance = dist(smoothMouseX, smoothMouseY, x1, y1);
+
+//       // Calculate opacity based on a non-linear function of distance
+//       let opacity = map(pow(distance, 0.5), 0, pow(gradientRadius, 0.5), 255, 0);
+//       opacity = constrain(opacity, 0, 255); // Ensure opacity is within 0-255
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// // Resize the canvas when the window is resized
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight); // Set canvas size to innerWidth and innerHeight
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   // Calculate the smoothed cursor position
+//   let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//   let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//   // Seed for Perlin noise
+//   let noiseSeedX = random(100);
+//   let noiseSeedY = random(100);
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the distance between the cursor and the line
+//       let distance = dist(smoothMouseX, smoothMouseY, x1, y1);
+
+//       // Calculate opacity based on Perlin noise
+//       let noiseValueX = noise(noiseSeedX + x1 * 0.01, noiseSeedY);
+//       let noiseValueY = noise(noiseSeedX, noiseSeedY + y1 * 0.01);
+//       let opacity = map(noise(noiseValueX, noiseValueY), 0, 1, 255, 0);
+
+//       // Apply opacity based on distance
+//       opacity = map(distance, 0, 200, 255, 0);
+//       opacity = constrain(opacity, 0, 255); // Ensure opacity is within 0-255
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// // Resize the canvas when the window is resized
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+// let lineLength = 20; // Length of each line segment
+// let spacing = 30; // Spacing between lines (including the gap)
+// let gap = 10; // Gap between lines
+// let rows, cols;
+// let prevMouseX, prevMouseY;
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight); // Set canvas size to innerWidth and innerHeight
+//   stroke(255); // Set line color to white
+//   noFill();    // Disable filling shapes
+//   rows = floor(height / spacing);
+//   cols = floor(width / spacing);
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// function draw() {
+//   background(0); // Set background color to black
+
+//   // Calculate the smoothed cursor position
+//   let smoothMouseX = lerp(prevMouseX, mouseX, 0.2);
+//   let smoothMouseY = lerp(prevMouseY, mouseY, 0.2);
+
+//   for (let i = 0; i < rows; i++) {
+//     for (let j = 0; j < cols; j++) {
+//       let x1 = j * spacing;
+//       let y1 = i * spacing;
+
+//       // Calculate the direction from the cursor to the line
+//       let angleToCursor = atan2(smoothMouseY - y1, smoothMouseX - x1);
+
+//       // Calculate opacity based on the angle difference
+//       let angleDiff = abs(angleToCursor - HALF_PI);
+//       let opacity = map(angleDiff, 0, PI, 255, 0);
+
+//       // Set the stroke color with varying opacity
+//       stroke(255, opacity);
+
+//       // Calculate the angle based on the smoothed cursor position
+//       let angle = angleToCursor;
+
+//       // Calculate the endpoint of the line
+//       let x2 = x1 + cos(angle) * lineLength;
+//       let y2 = y1 + sin(angle) * lineLength;
+
+//       // Draw the line
+//       line(x1, y1, x2, y2);
+//     }
+//   }
+
+//   // Update the previous cursor position
+//   prevMouseX = mouseX;
+//   prevMouseY = mouseY;
+// }
+
+// // Resize the canvas when the window is resized
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+// let trailImage;
+// let trail = [];
+// let maxTrailLength = 50;
+// let fadeAmount = 5;
+
+// function preload() {
+//   // Load your image here
+//   trailImage = loadImage('./t1 (1).png');
+// }
+
+// function setup() {
+//   createCanvas(window.innerWidth, window.innerHeight);
+//   noCursor(); // Hide the cursor
+// }
+
+// function draw() {
+//   background(0);
+
+//   // Add the current cursor position to the trail array
+//   let trailPos = createVector(mouseX, mouseY);
+//   trail.push(trailPos);
+
+//   // If the trail exceeds the maximum length, remove the oldest position
+//   if (trail.length > maxTrailLength) {
+//     trail.splice(0, 1);
+//   }
+
+//   // Draw and fade the trail
+//   for (let i = 0; i < trail.length; i++) {
+//     let imgAlpha = map(i, 0, trail.length, 255, 0);
+//     tint(255, imgAlpha);
+//     image(trailImage, trail[i].x, trail[i].y);
+//   }
+// }
+
+// function windowResized() {
+//   resizeCanvas(window.innerWidth, window.innerHeight);
+// }
+
+let trail = [];
+let squareSize = 20;
+let maxTrailLength = 50;
+let opacityDecay = 5;
+
+function setup() {
+  createCanvas(window.innerWidth, window.innerHeight);
+  noStroke();
+}
+
+function draw() {
+  background(0);
+
+  // Draw the square boxes in the trail
+  for (let i = 0; i < trail.length; i++) {
+    let pos = trail[i];
+    let opacity = 255 - i * opacityDecay;
+
+    fill(255, opacity);
+    rect(pos.x - squareSize / 2, pos.y - squareSize / 2, squareSize, squareSize);
+  }
+
+  // Remove the oldest position from the trail
+  if (trail.length > maxTrailLength) {
+    trail.shift();
+  }
+}
+
+function mouseMoved() {
+  // Add the current mouse position to the trail
+  let newPos = createVector(mouseX, mouseY);
+  trail.push(newPos);
+}
+
+  </script>
+</body>
+</html>
